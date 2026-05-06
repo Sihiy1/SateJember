@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Sihiy1/SateJember.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE -f dockerfile .'
